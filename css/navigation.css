@@ -1,0 +1,112 @@
+
+nav {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0b1f3a;
+    display: inline-block;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.nav-links > li > a:hover {
+    transform: scale(1.15);
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.arrow {
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-item.open .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-item.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: #0b1f3a;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+    transform: none;
+}
+
+.nav-toggle {
+    display: none;
+    background: var(--ba-blue);
+    color: white;
+    border: none;
+    padding: 0.6rem 0.9rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.nav-toggle:hover {
+    transform: scale(1.1);
+}

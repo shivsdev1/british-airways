@@ -1,0 +1,462 @@
+/* HERO SECTION */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem 1.2rem;
+    max-height: 800px;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero.hidden {
+    min-height: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.floating-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    animation: floatWiggle 3.5s ease-in-out infinite;
+}
+
+@keyframes floatWiggle {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.discord-btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: transform 0.25s ease, background 0.25s ease;
+    margin-top: 0.5rem;
+}
+
+.discord-btn:hover {
+    transform: scale(1.15);
+    background: #4752C4;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.about-section.open {
+    max-height: 3000px;
+}
+
+.about-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.open .about-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content {
+    transition: opacity 0.3s ease;
+}
+
+.about-content.hidden {
+    display: none;
+}
+
+.about-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.services-section.open {
+    max-height: 3000px;
+}
+
+.services-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.services-section.open .services-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-content {
+    transition: opacity 0.3s ease;
+}
+
+.service-content.hidden {
+    display: none;
+}
+
+.service-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.service-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* STAFF SECTION */
+.staff-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.staff-section.open {
+    max-height: 5000px;
+}
+
+.staff-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.staff-section.open .staff-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.staff-content {
+    transition: opacity 0.3s ease;
+}
+
+.staff-content.hidden {
+    display: none;
+}
+
+.staff-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.staff-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #0b1f3a;
+}
+
+.staff-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #0b1f3a;
+}
+
+.staff-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.booking-section.open {
+    max-height: 2000px;
+}
+
+.booking-inner {
+    max-width: 600px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.8s ease;
+}
+
+.booking-section.open .booking-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.booking-inner h2 {
+    margin-bottom: 2rem;
+}
+
+.booking-inner label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: 600;
+}
+
+.booking-inner input,
+.booking-inner select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.booking-inner button {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background: #0b1f3a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.booking-inner button:hover {
+    transform: scale(1.05);
+}
+
+.booking-result {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+/* ADMIN SECTION */
+.admin-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.admin-section.open {
+    max-height: 3000px;
+}
+
+.admin-inner {
+    max-width: 700px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.8s ease;
+}
+
+.admin-section.open .admin-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.admin-box {
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.admin-box input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.admin-box textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: "Segoe UI", sans-serif;
+    resize: vertical;
+}
+
+.admin-box button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    background: #0b1f3a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.admin-box button:hover {
+    transform: scale(1.05);
+}
+
+.admin-flight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7rem;
+    padding: 0.6rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* HIGHLIGHTS SECTION */
+.highlights-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.highlights-section.open {
+    max-height: 2000px;
+}
+
+.highlights-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.8s ease;
+}
+
+.highlights-section.open .highlights-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.highlights-inner h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.highlights-carousel {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+}
+
+.highlight-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.highlight-item.active {
+    display: flex;
+}
+
+.highlight-item img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.carousel-btn {
+    background: #0b1f3a;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.1);
+    background: #1a3a5a;
+}
+
+.highlight-admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7rem;
+    padding: 0.8rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.highlight-admin-item img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+}

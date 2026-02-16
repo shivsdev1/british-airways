@@ -1,0 +1,20 @@
+/* BASE STYLES AND RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #0b1f3a;
+    background: #ffffff;
+}
+
+:root {
+    --ba-blue: #075aaa;
+}
+
+.hidden {
+    display: none;
+}
